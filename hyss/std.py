@@ -2,9 +2,9 @@ from typing import Union, Literal
 
 
 def stylesheet(styles: dict[str, dict], minify: bool = True):
-    output = 
-    br = '' if minify else '
-'
+    output = "" 
+    br = '' if minify else ''
+
     for name, value in styles.items():
         if type(value) is str:
             output += f'{br}{name}:{value};'
