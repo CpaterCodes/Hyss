@@ -9,7 +9,7 @@ def stylesheet(styles: dict[str, dict], minify: bool = True):
         if type(value) is str:
             output += f'{br}{name}:{value};'
         else:
-            output += f'{br}{name}' + '{' + compile_css(value, minify=minify) + br + '}'
+            output += f'{br}{name}' + '{' + stylesheet(value, minify=minify) + br + '}'
 
     return output
 
