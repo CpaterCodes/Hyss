@@ -1,2 +1,2 @@
-from std import stylesheet, sub_style, animation
+from .std import stylesheet, sub_style, animation
 
