@@ -10,7 +10,7 @@ def stylesheet(styles: dict[str, dict], minify: bool = True):
             output += f'{br}{name}:{value};'
         else:
             output += f'{br}{name}' + '{' + stylesheet(value, minify=minify) + br + '}'
-
+        output = output.replace('__ANIMATE__', '')
     return output
 
 
@@ -33,5 +33,5 @@ def animation(
     props = f'{name} {duration_ms}ms {timing_fn} {delay_ms}ms {iteration_count} {direction} {fill_mode} {play_state}'
     return {
         f'@keyframes {name}': keyframes,
-        **{target: {'animation': props} for target in targets}
+        **{f'__ANIMATE__{target}': {'animation': props} for target in targets}
     }
