@@ -11,7 +11,7 @@ Define styles as python dicts! All of the power of python, realised to create st
 - Helper for compound css classes (think 'div p', 'main section')  
 
 
-## TODO
+## Potential Future Features
 
 - Generate helpers for features such as keyframe animations.
 
@@ -21,7 +21,8 @@ how style sheets function in many css-in-js libraries
 ## Usage Demonstration
 
 The most basic function is _stylesheet()_, which takes a structure such as that shown and creates minified css.
-For ease of debugging, a second value _False_ can be passed to the function to generate a more readable format for ease of debugging. 
+For ease of debugging, a second value _False_ can be
+passed to the function to generate a more readable format for ease of debugging. 
 
 ```
     # Basic stylesheet definition  
@@ -56,5 +57,9 @@ For ease of debugging, a second value _False_ can be passed to the function to g
 	  color:red;
 	  }'
 
-    # This isn't intended for production use, but may be useful for debugging purposes (especially in finding or examining novel problems/challenges)
-``
+    # This isn't intended for production use, but may be useful
+    # for debugging purposes (especially in finding or examining novel problems/challenges)
+```
+
+Further tutorials and a full reference are TODO: built-in type hints are used where possible in the source code
+in order to maximise potential support from your IDE of choice, but nonetheless these are future goals. 
