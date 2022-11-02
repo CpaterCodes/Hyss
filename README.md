@@ -1,4 +1,4 @@
-# Hyss - High Impact Style Sheets
+# Hyss - High Ympact Style Sheets
 
 ## Rationale
 
