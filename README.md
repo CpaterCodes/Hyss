@@ -3,6 +3,7 @@
 ## Rationale
 
 Define styles as python dicts! All of the power of python, realised to create stylesheets.
+Coming soon to a package index near you!
 
 ## Features
 
@@ -20,9 +21,9 @@ how style sheets function in many css-in-js libraries
 
 ## Usage Demonstration
 
-The most basic function is _stylesheet()_, which takes a structure such as that shown and creates minified css.
-For ease of debugging, a second value _False_ can be
-passed to the function to generate a more readable format for ease of debugging. 
+The most basic function is *stylesheet()*, which takes a structure such as that shown and creates minified css.
+For ease of debugging, a second value *False* can be
+passed to the function to generate a more readable format. 
 
 ```
     # Basic stylesheet definition  
@@ -61,5 +62,4 @@ passed to the function to generate a more readable format for ease of debugging.
     # for debugging purposes (especially in finding or examining novel problems/challenges)
 ```
 
-Further tutorials and a full reference are TODO: built-in type hints are used where possible in the source code
-in order to maximise potential support from your IDE of choice, but nonetheless these are future goals. 
+Further tutorials and a full reference are TODO  

@@ -26,13 +26,9 @@ def animation(
         keyframes: dict[str, any],
         duration_ms: Union[int, float] = 0,
         delay_ms: Union[int, float] = 0,
-        play_state: Literal[
-            'paused', 'running', 'initial', 'inherit'
-            ] = 'running',
+        play_state: Literal['paused', 'running', 'initial', 'inherit'] = 'running',
         timing_fn: str = 'ease',
-        direction: Literal[
-            'normal', 'reverse', 'alternate', 'alternate-reverse', 'initial', 'inherit'
-            ] = 'normal',
+        direction: Literal['normal', 'reverse', 'alternate', 'alternate-reverse', 'initial', 'inherit'] = 'normal',
         iteration_count: Union[int, Literal['infinite', 'initial', 'inherit']] = 1,
         fill_mode: Literal['none', 'forwards', 'backwards', 'both', 'initial', 'inherit'] = 'none',
 ):
