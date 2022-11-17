@@ -1,5 +1,5 @@
 import pytest 
-from HYSS.hyss import sub_style, stylesheet
+from ..hyss import sub_style, stylesheet
 
 def test_basic_substyle():
     target = 'body{background-color:blue;}body div{color:yellow;}body p{color:white;}'

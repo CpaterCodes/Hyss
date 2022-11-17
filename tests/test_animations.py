@@ -1,5 +1,5 @@
 import pytest
-from HYSS.hyss import stylesheet, animation
+from ..hyss import stylesheet, animation
 
 def test_default():
     style = stylesheet({
