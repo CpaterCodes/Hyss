@@ -2,19 +2,21 @@ import pytest
 from ..hyss import stylesheet
 
 def test_basic_stylesheet():
-    assert stylesheet({'display': 'flex', 'justify-content': 'center'}) == "display:flex;justify-content:center;"
+    css = "display:flex;justify-content:center;" 
+    assert stylesheet(
+            {'display': 'flex', 'justify-content': 'center'}
+    ) == css
 
 
 def test_multiple_classes():
-    classes = stylesheet({
+
+    css = 'body{background-color:yellow;}div{display:flex;color:red;}' 
+    assert stylesheet({
         'body': {
-            'background-color': 'yellow',
-            'overflow': 'auto',
+            'background-color': 'yellow'
         }, 
         'div': {
             'display': 'flex',
             'color': 'red'
         }
-    })
-    assert classes == 'body{background-color:yellow;overflow:auto;}div{display:flex;color:red;}'
-
+    }) == css
