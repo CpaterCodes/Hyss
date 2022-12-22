@@ -2,18 +2,17 @@ from typing import Union, Literal
 
 prefixes = ['__ANIMATE__']
 
-def stylesheet(styles: dict[str, dict], minify: bool = True):
+def stylesheet(styles: dict[str, dict]):
     output = "" 
-    br = '' if minify else '\n'
 
     for name, value in styles.items():
         props = ""
         if type(value) is not dict:
             props = ':' + value + ';'
         else:
-            props = '{' + stylesheet(value, minify=minify) + br + '}'
+            props = '{' + stylesheet(value) + '}'
 
-        output += f'{br}{name}{props}'
+        output += f'{name}{props}'
 
     for prefix in prefixes:
         output = output.replace(prefix, '')
