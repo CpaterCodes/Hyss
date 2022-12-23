@@ -2,7 +2,8 @@
 
 ## Rationale
 
-Define styles as python dicts! All of the power of python, realised to create stylesheets.
+Define styles as python dicts! 
+All of the power of python, realised to create stylesheets.
 Coming soon to a package index near you!
 
 ## Features
@@ -14,21 +15,26 @@ Coming soon to a package index near you!
 
 ## Potential Future Features
 
-- Generate helpers for features such as keyframe animations.
+- Generate helpers for various css features. Already exist for animations.
 
-- Create a means of generating individual styles to be scoped to specific element tags, akin to
-how style sheets function in many css-in-js libraries
+- Build an indenter for output css; ease of debugging for users
 
-## Usage Demonstration
+- Means to convert 
 
-The most basic function is *stylesheet()*, which takes a structure such as that shown and creates minified css.
-For ease of debugging, a second value *False* can be
-passed to the function to generate a more readable format. 
+## Usage Demonstrations
 
-```
-    # Basic stylesheet definition  
+Here is a set of examples to illustrate the behaviour of functions within 
+hyss
 
-    stylesheet(
+**stylesheet(styles: dict) -> str**
+
+Takes a fractal dictionary structure and generates a minified css string as
+shown
+
+```python
+from hyss import stylesheet
+
+css = stylesheet(
         {
             'body': {
                 'background-color': 'yellow',
@@ -37,29 +43,42 @@ passed to the function to generate a more readable format.
                 'color': 'red'
             }
         }
-    ) => 'body{background-color:yellow;}div{color:red;}'
 
-    # Debugging
-    
-    stylesheet(
-        {
-            'body': {
-                'background-color': 'yellow',
-            }, 
-            'div': {
-                'color': 'red'
-            }
-        },
-	minify = False
-    ) => 'body{
-    	  background-color:yellow;
-	  }
-	  div{
-	  color:red;
-	  }'
+print(css)
 
-    # This isn't intended for production use, but may be useful
-    # for debugging purposes (especially in finding or examining novel problems/challenges)
+# This prints the following
+
+# "body{background-color:yellow;}div{color:red;}"
 ```
 
-Further tutorials and a full reference are TODO  
+**with_linebreaks(css: str) -> str**
+
+Applies linebreaks to a minified css string, for debugging purposes as shown
+
+```python
+
+from hyss.format import with_linebreaks
+
+minified_css = "body{background-color:yellow;}div{color:red;}"
+
+linebreak_css = with_linebreaks(minified_css)
+
+print(linebreaks_css)
+
+# This prints "body{\nbackground-color:yellow;\n}\ndiv{\ncolor:red;\n}\n"
+
+```
+
+In a file, *linebreak_css* will look as follows
+
+```css
+
+body{
+background-color:yellow;
+}
+div{
+color:red;
+}
+
+```
+
