@@ -2,3 +2,5 @@ Pipfile.lock
 .python-version
 dist
 hyss.egg-info
+publishing.txt
+
