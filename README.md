@@ -23,7 +23,7 @@ Here is a set of examples to illustrate the behaviour of functions within
 hyss. 
 
 The `stylesheet` function can take a nested dictionary structure and 
-generate minified css. Consider the following code:
+generate minified CSS. Consider the following code:
 
 ```python
 from hyss import stylesheet
@@ -41,7 +41,7 @@ example_css = stylesheet(
         }
 ```
 
-The `example_css` variable will now contain the following css:
+The `example_css` variable will now contain the following CSS:
 
 ```css
 body{background-color:yellow;}div{color:red;}
@@ -155,7 +155,7 @@ minified_css = "body{background-color:yellow;}div{color:red;}"
 linebreak_css = with_linebreaks(minified_css)
 ```
 
-The css in `linebreak_css` will look as follows in a file:
+The CSS in `linebreak_css` will look as follows in a file:
 
 ```css
 body{
