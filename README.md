@@ -2,12 +2,12 @@
 
 ### Contents
 
--[Rationale](#rationale)
--[Basics](#basics)
--[Other Powers](#other-powers)
--[Animations](#animations)
--[Formatting](#formatting)
--[Future Intentions](#future-intentions)
+- [Rationale](#rationale)
+- [Basics](#basics)
+- [Other Powers](#other-powers)
+- [Animations](#animations)
+- [Formatting](#formatting)
+- [Future Intentions](#future-intentions)
 
 ## Rationale
 
